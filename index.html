@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunset Sands Hotel | Hikkaduwa, Sri Lanka</title>
+  <meta name="description"
+    content="Welcome to Sunset Sands Hotel in Hikkaduwa. Escape to golden beaches, cozy rooms, beachfront lounge, and unforgettable seaside experiences.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Leaflet CSS for Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Site Header with Light Color Blue Bar -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Sunset Sands Hotel Logo" class="site-logo-img">
+        <div class="logo-text-wrap">
+          <div class="logo-main">SUNSET <span>SANDS</span></div>
+          <div class="logo-sub">Hikkaduwa &bull; Sri Lanka</div>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="rooms.html" class="nav-link">Rooms</a></li>
+          <li><a href="#downsouth" class="nav-link">Blogs</a></li>
+          <li><a href="#about" class="nav-link">About us</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <div class="header-social">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+            aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+            aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+        <button class="mobile-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Multi-Image & Text Slider -->
+  <section class="hero-slider-container" id="home">
+    <div class="hero-slider">
+      <!-- Slide 1: Welcome -->
+      <div class="hero-slide active"
+        style="background-image: url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1920&auto=format&fit=crop');">
+        <div class="hero-slide-overlay"></div>
+        <div class="container">
+          <div class="hero-content">
+            <span class="hero-subtitle">WELCOME TO</span>
+            <h1 class="hero-title">Sunset Sands Hotel<br>Hikkaduwa</h1>
+            <p class="hero-desc">Rise with the waves. Dine with the sunrise. At Sunset Sands, every morning begins with
+              flavour, comfort, and the magic of Hikkaduwa.</p>
+            <div class="hero-actions">
+              <button class="btn-pill btn-pill-white btn-check-availability">Check Availability</button>
+              <a href="#about" class="btn-pill btn-pill-outline"
+                style="color: #ffffff; border-color: rgba(255,255,255,0.7);">Discover More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Golden Waves -->
+      <div class="hero-slide"
+        style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop');">
+        <div class="hero-slide-overlay"></div>
+        <div class="container">
+          <div class="hero-content">
+            <span class="hero-subtitle">PARADISE RETREAT</span>
+            <h2 class="hero-title">Chill by Hikkaduwa’s<br>Golden Waves</h2>
+            <p class="hero-desc">Escape to where golden beaches meet soothing ocean waters. Breathe in the warm sea
+              breeze, unwind along the tranquil shoreline, and let your seaside escape begin.</p>
+            <div class="hero-actions">
+              <button class="btn-pill btn-pill-white btn-check-availability">Book Your Stay</button>
+              <a href="#facilities" class="btn-pill btn-pill-outline"
+                style="color: #ffffff; border-color: rgba(255,255,255,0.7);">Our Facilities</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Coastal Luxury Rooms -->
+      <div class="hero-slide"
+        style="background-image: url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1920&auto=format&fit=crop');">
+        <div class="hero-slide-overlay"></div>
+        <div class="container">
+          <div class="hero-content">
+            <span class="hero-subtitle">COASTAL COMFORT</span>
+            <h2 class="hero-title">Modern Coziness &amp;<br>Seaside Serenity</h2>
+            <p class="hero-desc">Step into comfort designed for ultimate relaxation. Enjoy plush king bedding, private
+              ocean balconies, and calming sounds of waves right beyond your window.</p>
+            <div class="hero-actions">
+              <a href="rooms.html" class="btn-pill btn-pill-white">Explore Rooms</a>
+              <button class="btn-pill btn-pill-outline btn-check-availability"
+                style="color: #ffffff; border-color: rgba(255,255,255,0.7);">Check Dates</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4: Sunrise & Dining -->
+      <div class="hero-slide"
+        style="background-image: url('https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=1920&auto=format&fit=crop');">
+        <div class="hero-slide-overlay"></div>
+        <div class="container">
+          <div class="hero-content">
+            <span class="hero-subtitle">DOWN SOUTH FLAVOURS</span>
+            <h2 class="hero-title">Dine by the Sunrise &amp;<br>Tropical Nights</h2>
+            <p class="hero-desc">Savor authentic Sri Lankan breakfasts, fresh tropical fruits, and romantic beach
+              dinners with unforgettable golden sunsets over the Indian Ocean.</p>
+            <div class="hero-actions">
+              <button class="btn-pill btn-pill-white btn-check-availability">Reserve Now</button>
+              <a href="#downsouth" class="btn-pill btn-pill-outline"
+                style="color: #ffffff; border-color: rgba(255,255,255,0.7);">Down South Guide</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button class="hero-slider-nav hero-slider-prev" aria-label="Previous slide">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button class="hero-slider-nav hero-slider-next" aria-label="Next slide">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <!-- Slider Dots -->
+    <div class="hero-slider-dots"></div>
+  </section>
+
+  <!-- Chill by Hikkaduwa's Golden Waves Section -->
+  <section class="chill-section" id="about">
+    <div class="container">
+      <div class="chill-grid">
+        <!-- Interactive Slider -->
+        <div class="chill-slider-container">
+          <div class="chill-slider">
+            <div class="chill-slide active">
+              <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=900&auto=format&fit=crop"
+                alt="Sunset Sands Hotel ocean view pool">
+            </div>
+            <div class="chill-slide">
+              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=900&auto=format&fit=crop"
+                alt="Luxury beachfront cozy room">
+            </div>
+            <div class="chill-slide">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=900&auto=format&fit=crop"
+                alt="Golden waves of Hikkaduwa beach">
+            </div>
+            <div class="chill-slide">
+              <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=900&auto=format&fit=crop"
+                alt="Seaside dining at sunset">
+            </div>
+          </div>
+          <div class="slider-dots"></div>
+        </div>
+
+        <!-- Text Content -->
+        <div class="chill-text">
+          <h2 class="chill-title">Chill by Hikkaduwa’s<br>Golden Waves</h2>
+          <p class="chill-desc">Escape to Sunset Sands Hotel in Hikkaduwa, where golden beaches meet soothing ocean
+            waves. Our rooms are cozy, stylish, and designed for ultimate relaxation. Wake up to a freshly prepared
+            breakfast, breathe in the sea breeze, and let the calm, charm, and warmth of our seaside retreat make your
+            stay unforgettable.</p>
+          <p class="chill-desc">Experience the perfect coastal getaway at Sunset Sands Hotel. Each room offers comfort,
+            modern amenities, and a view of Hikkaduwa’s serene shoreline. Spend your days by the beach, savor delightful
+            breakfasts, and enjoy the friendly hospitality that makes every visit a cherished memory.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Statistics Counter -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" data-target="5" data-suffix="">5</div>
+          <div class="stat-label">Years of Service</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="500" data-suffix="">500</div>
+          <div class="stat-label">Sq. Meter Area</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="20" data-suffix="">20</div>
+          <div class="stat-label">Nice Rooms</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="2000" data-suffix="+">2000+</div>
+          <div class="stat-label">Happy Customers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How To Reach Section -->
+  <section class="reach-section" id="directions">
+    <div class="container">
+      <div class="reach-header">
+        <div>
+          <h2 class="reach-title">How To Reach</h2>
+          <p class="reach-subtitle">Just minutes from Hikkaduwa Railway Station and main highway.</p>
+        </div>
+        <a href="https://maps.google.com/?q=Hikkaduwa+Beach+Sri+Lanka" target="_blank" rel="noopener noreferrer"
+          class="btn-pill btn-pill-outline">
+          <i class="fa-solid fa-location-arrow"></i> Get Direction
+        </a>
+      </div>
+
+      <div class="map-wrapper">
+        <div class="map-pin-card">
+          <img src="images/logo.png" alt="Sunset Sands Hotel" class="site-logo-img" style="width: 36px; height: 36px;">
+          <div>
+            <div class="map-pin-title">Sunset Sands Hotel</div>
+            <div class="map-pin-sub">Galle Road, Hikkaduwa, Sri Lanka</div>
+          </div>
+        </div>
+        <div id="map"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilities Section -->
+  <section class="facilities-section" id="facilities">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Facilities</h2>
+        <p class="section-desc">Enjoy cozy rooms, beachfront lounge, fresh breakfast, free Wi-Fi, 24/7 assistance, and
+          serene spaces—everything for a perfect Hikkaduwa stay.</p>
+      </div>
+
+      <div class="facilities-grid">
+        <div class="facility-card">
+          <div class="facility-icon-wrap">
+            <i class="fa-solid fa-square-parking"></i>
+          </div>
+          <span class="facility-name">Free Parking</span>
+        </div>
+
+        <div class="facility-card">
+          <div class="facility-icon-wrap">
+            <i class="fa-solid fa-wifi"></i>
+          </div>
+          <span class="facility-name">Free Wi-fi</span>
+        </div>
+
+        <div class="facility-card">
+          <div class="facility-icon-wrap">
+            <i class="fa-solid fa-paw"></i>
+          </div>
+          <span class="facility-name">Pet Friendly</span>
+        </div>
+
+        <div class="facility-card">
+          <div class="facility-icon-wrap">
+            <i class="fa-solid fa-martini-glass-citrus"></i>
+          </div>
+          <span class="facility-name">Minibar</span>
+        </div>
+
+        <div class="facility-card">
+          <div class="facility-icon-wrap">
+            <i class="fa-solid fa-umbrella-beach"></i>
+          </div>
+          <span class="facility-name">Beach Access</span>
+        </div>
+
+        <div class="facility-card">
+          <div class="facility-icon-wrap">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <span class="facility-name">Fresh Breakfast</span>
+        </div>
+
+        <div class="facility-card">
+          <div class="facility-icon-wrap">
+            <i class="fa-solid fa-snowflake"></i>
+          </div>
+          <span class="facility-name">Air Conditioned</span>
+        </div>
+
+        <div class="facility-card">
+          <div class="facility-icon-wrap">
+            <i class="fa-solid fa-clock"></i>
+          </div>
+          <span class="facility-name">24/7 Assistance</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best of DownSouth Section -->
+  <section class="downsouth-section" id="downsouth">
+    <div class="container">
+      <div class="downsouth-header">
+        <h2 class="downsouth-title">Best of DownSouth</h2>
+        <a href="#downsouth" class="see-all-link">See All <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="downsouth-grid">
+        <!-- Card 1 -->
+        <div class="downsouth-card">
+          <div class="downsouth-img">
+            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800&auto=format&fit=crop"
+              alt="Hikkaduwa Beach and Coral Reefs">
+          </div>
+          <div class="downsouth-body">
+            <h3 class="downsouth-card-title">Hikkaduwa Beach</h3>
+            <p class="downsouth-card-desc">Hikkaduwa Beach boasts golden sands, crystal-clear waters, and gentle waves.
+              Perfect for relaxing, swimming, snorkeling, or enjoying stunning sunsets, it offers an unforgettable
+              coastal experience full of natural beauty and tropical charm.</p>
+            <a href="rooms.html" class="learn-more-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="downsouth-card">
+          <div class="downsouth-img">
+            <img src="https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?q=80&w=800&auto=format&fit=crop"
+              alt="Galle Dutch Fort Historic Ramparts">
+          </div>
+          <div class="downsouth-body">
+            <h3 class="downsouth-card-title">Galle Dutch Fort</h3>
+            <p class="downsouth-card-desc">A UNESCO World Heritage fortress located only minutes from our hotel. Wander
+              ancient cobblestone streets, colonial ramparts, ocean-view lighthouses, artisan cafes, and experience Sri
+              Lanka's living history.</p>
+            <a href="rooms.html" class="learn-more-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="downsouth-card">
+          <div class="downsouth-img">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop"
+              alt="Sea Turtle Sanctuary and Marine Park">
+          </div>
+          <div class="downsouth-body">
+            <h3 class="downsouth-card-title">Sea Turtle Sanctuary</h3>
+            <p class="downsouth-card-desc">Experience gentle giant green sea turtles swimming right along the shoreline
+              in Hikkaduwa. Snorkel through colorful coral reefs and discover marine conservation efforts up close in
+              tranquil turquoise lagoons.</p>
+            <a href="rooms.html" class="learn-more-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Our Guests Say (Testimonials) -->
+  <section class="testimonials-section" id="reviews">
+    <div class="container">
+      <div class="testimonials-header">
+        <div class="testimonials-title-area">
+          <h2 class="section-title">What Our Guests Say</h2>
+          <p class="section-desc">Our guests love Sunset Sands Hotel for its cozy rooms, friendly staff, stunning beach
+            views, and unforgettable experiences.</p>
+        </div>
+
+        <div class="testimonials-score-box">
+          <div class="score-main">
+            <div class="score-val">4.8</div>
+            <div class="score-label">Out of 5</div>
+          </div>
+          <div class="score-breakdown">
+            <div><i class="fa-brands fa-google"></i> <strong>2000+</strong> Rating</div>
+            <div class="score-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <div style="color: #64748b; font-size: 0.75rem;">500+ Verified Reviews</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Review 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">“ Absolutely loved our stay! The rooms were cozy, the breakfast delicious, and
+            the beach just steps away. Truly a perfect seaside escape. ”</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><i class="fa-regular fa-user"></i></div>
+            <span class="author-name">Morgan Jonathan</span>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">“ Sunset Sands offered the most peaceful coastal retreat. Waking up to the
+            calming sound of ocean waves and friendly Sri Lankan hospitality made our vacation unforgettable! ”</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><i class="fa-regular fa-user"></i></div>
+            <span class="author-name">Elena Rostova</span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">“ The location is unbeatable. Minutes away from Hikkaduwa station, right on the
+            beach with spotless rooms and super fast Wi-Fi. We will certainly return next season! ”</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><i class="fa-regular fa-user"></i></div>
+            <span class="author-name">David &amp; Sarah K.</span>
+          </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">“ The breakfast spread of tropical fruits and authentic hoppers was delightful.
+            Clean bedding, air conditioning was fantastic, and the sunset views from the terrace are breathtaking. ”</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><i class="fa-regular fa-user"></i></div>
+            <span class="author-name">Marcus Vance</span>
+          </div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">“ Outstanding value for money. The staff assisted us with snorkeling trips and
+            airport transfers with warm smiles. 10/10 recommendation for anyone visiting Down South! ”</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><i class="fa-regular fa-user"></i></div>
+            <span class="author-name">Aiko Tanaka</span>
+          </div>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">“ Absolutely loved our stay! The rooms were cozy, the breakfast delicious, and
+            the beach just steps away. Truly a perfect seaside escape. ”</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><i class="fa-regular fa-user"></i></div>
+            <span class="author-name">Liam O'Connor</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <h2 class="gallery-title">Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item" title="Click to view full image">
+          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800&auto=format&fit=crop"
+            alt="Beachfront resort pool">
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery-item" title="Click to view full image">
+          <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=800&auto=format&fit=crop"
+            alt="Cozy hotel room interior">
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery-item" title="Click to view full image">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800&auto=format&fit=crop"
+            alt="Deluxe king bedroom suite">
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery-item" title="Click to view full image">
+          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800&auto=format&fit=crop"
+            alt="Oceanfront balcony vista">
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery-item" title="Click to view full image">
+          <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=800&auto=format&fit=crop"
+            alt="Beach sunset dining">
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery-item" title="Click to view full image">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop"
+            alt="Hikkaduwa coastline waves">
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation CTA Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner-content">
+        <p class="cta-pretitle">Hotel Reservation</p>
+        <h2 class="cta-title">Extra Perks When You Book Directly With Us</h2>
+        <div class="cta-call-block">
+          <span class="cta-call-label">Call Us Now:</span>
+          <a href="tel:+947711231234" class="cta-phone-btn">
+            <i class="fa-solid fa-phone"></i> +94-771 123 1234
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand Col -->
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Sunset Sands Hotel Logo" class="site-logo-img">
+            <div class="logo-text-wrap">
+              <div class="logo-main">SUNSET <span>SANDS</span></div>
+              <div class="logo-sub">Hikkaduwa &bull; Sri Lanka</div>
+            </div>
+          </a>
+          <p class="footer-about" style="margin-top: 14px;">
+            Hikkaduwa Beach boasts golden sands, crystal-clear waters, and gentle waves. Perfect for relaxing, swimming,
+            snorkeling, or enjoying stunning sunsets, it offers an unforgettable coastal experience full of natural
+            beauty and tropical charm.
+          </p>
+        </div>
+
+        <!-- Hotel Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Hotel</h4>
+          <ul class="footer-links">
+            <li><a href="#about" class="footer-link">About us</a></li>
+            <li><a href="#directions" class="footer-link">Directions</a></li>
+            <li><a href="#bookingModal" class="footer-link btn-reservation">Contact us</a></li>
+            <li><a href="#reviews" class="footer-link">Reviews</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Help -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Customer Help</h4>
+          <ul class="footer-links">
+            <li><a href="#reviews" class="footer-link">Guest Feedback</a></li>
+            <li><a href="#home" class="footer-link">Site Map</a></li>
+            <li><a href="rooms.html#hotel-info" class="footer-link">FAQs</a></li>
+            <li><a href="#bookingModal" class="footer-link btn-reservation">Customer support</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Col -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact</h4>
+          <div class="footer-contact-info">
+            <p><strong>Sunset Sands Hotel</strong></p>
+            <p>no.123, Galle Road</p>
+            <p>Hikkaduwa, Sri Lanka</p>
+            <p><a href="mailto:sunsetsand@gmail.com">sunsetsand@gmail.com</a></p>
+            <p><a href="tel:+947711231234">+94-771 123 1234</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Sunset Sands Hotel. All rights reserved. Designed for Hikkaduwa Beach.</div>
+        <div class="footer-social-icons">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+            aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+            aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Booking / Availability Modal -->
+  <div class="modal-backdrop" id="bookingModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <h3 class="modal-title">Check Availability</h3>
+      <p class="modal-subtitle">Reserve your beach retreat at Sunset Sands Hotel Hikkaduwa.</p>
+
+      <form id="bookingForm" class="booking-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="checkinDate"><i class="fa-regular fa-calendar-check"></i> Check-in Date</label>
+            <input type="date" id="checkinDate" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="checkoutDate"><i class="fa-regular fa-calendar-xmark"></i> Check-out Date</label>
+            <input type="date" id="checkoutDate" class="form-control" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="roomType"><i class="fa-solid fa-bed"></i> Room Type</label>
+            <select id="roomType" class="form-control" required>
+              <option value="single">Single Room ($65/night)</option>
+              <option value="double" selected>Double Room ($110/night)</option>
+              <option value="deluxe">Deluxe Ocean View ($165/night)</option>
+              <option value="family">Family Budget Suite ($195/night)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="guestsCount"><i class="fa-solid fa-user-group"></i> Guests</label>
+            <select id="guestsCount" class="form-control" required>
+              <option value="1">1 Adult</option>
+              <option value="2" selected>2 Adults</option>
+              <option value="3">2 Adults + 1 Child</option>
+              <option value="4">4 Guests (Family)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="guestName"><i class="fa-regular fa-user"></i> Full Name</label>
+          <input type="text" id="guestName" class="form-control" placeholder="John Doe" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="guestEmail"><i class="fa-regular fa-envelope"></i> Email Address</label>
+            <input type="email" id="guestEmail" class="form-control" placeholder="john@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="guestPhone"><i class="fa-solid fa-phone"></i> Phone / WhatsApp</label>
+            <input type="tel" id="guestPhone" class="form-control" placeholder="+94 77 123 4567" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit-booking">Confirm &amp; Check Availability</button>
+      </form>
+
+      <div class="booking-success">
+        <i class="fa-solid fa-circle-check"></i>
+        <h3>Availability Confirmed!</h3>
+        <p>Thank you! Your inquiry has been received. Our concierge team at Sunset Sands will contact you via WhatsApp /
+          email within 1 hour to finalize your reservation.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <button class="lightbox-close" aria-label="Close Lightbox">&times;</button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Previous Image"><i
+        class="fa-solid fa-chevron-left"></i></button>
+    <img src="" alt="Gallery Preview" class="lightbox-img">
+    <button class="lightbox-nav lightbox-next" aria-label="Next Image"><i
+        class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+  <!-- Leaflet JS for Map -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <!-- Main Script -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
