@@ -127,6 +127,13 @@ function initHeroSlider() {
 
     slides[currentSlide].classList.add('active');
     if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+
+    // Dynamically apply data-overlay-color for slide
+    const overlayColor = slides[currentSlide].getAttribute('data-overlay-color');
+    const overlay = slides[currentSlide].querySelector('.hero-slide-overlay');
+    if (overlay && overlayColor) {
+      overlay.style.background = `linear-gradient(135deg, ${overlayColor} 0%, rgba(4, 8, 16, 0.85) 100%)`;
+    }
   }
 
   function nextSlide() {
@@ -195,6 +202,15 @@ function initHeroSlider() {
       } else {
         prevSlide();
       }
+    }
+  }
+
+  // Initialize first slide overlay
+  if (slides[0]) {
+    const firstOverlayColor = slides[0].getAttribute('data-overlay-color');
+    const firstOverlay = slides[0].querySelector('.hero-slide-overlay');
+    if (firstOverlay && firstOverlayColor) {
+      firstOverlay.style.background = `linear-gradient(135deg, ${firstOverlayColor} 0%, rgba(4, 8, 16, 0.85) 100%)`;
     }
   }
 
